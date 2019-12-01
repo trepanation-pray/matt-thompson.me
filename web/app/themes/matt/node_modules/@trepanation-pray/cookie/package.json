@@ -1,0 +1,15 @@
+{
+  "name": "@trepanation-pray/cookie",
+  "version": "1.3.0",
+  "description": "Javascript cookie helper functions",
+  "license": "MIT",
+  "repository": "trepanation-pray/cookie",
+  "main": "index.js",
+  "keywords": [
+    "svg",
+    "url encode",
+    "npm",
+    "package",
+    "trepanation-pray"
+  ]
+}

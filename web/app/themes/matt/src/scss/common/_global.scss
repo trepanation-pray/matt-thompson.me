@@ -1,0 +1,38 @@
+/* =======================================================
+	Global Styles
+======================================================= */
+
+*, *:before, *:after {
+	box-sizing: border-box;
+}
+  
+  a {
+	  text-decoration: none;
+	  color: inherit;
+  }
+  b, strong {
+    font-weight: 600;
+  }
+  p {
+	  margin: 0 0 24px;
+  }
+  hr {
+	  width: 50%;
+	  margin: 100px auto;
+	  height: 1px;
+	  border: none;
+	  background: rgba($color-secondary,.1);
+  }
+  ul, li {
+	  margin: 0;
+  }
+  
+  li {
+	  list-style-type: disc;
+  }
+
+
+  body {
+	  font: 300 16px/1.5 'Lato', sans-serif;
+	  color: $color-dark;
+  }

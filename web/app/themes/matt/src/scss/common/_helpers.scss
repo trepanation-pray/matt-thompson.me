@@ -1,0 +1,139 @@
+/* =======================================================
+	Helper Classes
+======================================================= */
+
+.skip-content__link {
+	position: absolute;
+	left: 0;
+	top: -100%;
+	width: auto;
+	margin-left: 0;
+	list-style: outside none;
+	z-index: 20;
+
+	&:focus {
+		top: 4px;
+		left: 4px;
+		outline-color: $color-accessibilityBackground;
+		background-color: $color-accessibilityBackground;
+		color: $color-accessibilityForeground;
+		font-weight: bold;
+		padding: 10px;
+	}
+}
+
+
+.u-container {
+	max-width: 1200px;
+	padding-left: 16px;
+	padding-right: 16px;
+	margin: auto;
+	position: relative;
+}
+
+.u-text-align {
+	&--left {
+		text-align: left;
+	}
+	&--center {
+		text-align: center;
+	}
+	&--right {
+		text-align: right;
+	}
+}
+
+.u-row {
+	display: flex;
+	flex-wrap: wrap;
+	margin: -16px;
+	& + & {
+		margin-top: 24px;
+		@include break-point(md) {
+			margin-top: 48px;
+		}
+		@include break-point(lg) {
+			margin-top: 96px;
+		}
+	}
+}
+
+.u-col {
+	margin: 16px;
+	&--1 {
+		width: calc(100% - 32px);
+	}
+	&--2 {
+		width: calc(100% - 32px);
+		@include break-point(md) {
+			width: calc(50% - 32px);
+		}
+	}
+	&--3 {
+		width: calc(100% - 30px);
+		@include break-point(md) {
+			width: calc(33.33% - 32px);
+		}
+	}
+}
+
+.u-section {
+	padding: 4rem 0;
+    @include break-point(md) {
+        padding: 6rem 0;
+    }
+    @include break-point(lg) {
+        padding: 8rem 0;
+	}
+}
+
+.j-animate {
+	transition: 1s 0.25s;
+	opacity: 0;
+	&.animate {
+		opacity: 1;
+	}
+	&--up {
+		transform: translateY(100px);
+		&.animate {
+			transform: translateY(0);
+		}
+	}
+	&--down {
+		transform: translateY(-100px);
+		&.animate {
+			transform: translateY(0);
+		}
+	}
+	&--left {
+		transform: translateX(100px);
+		&.animate {
+			transform: translateX(0);
+		}
+	}
+	&--right {
+		transform: translateX(-100px);
+		&.animate {
+			transform: translateX(0);
+		}
+	}
+}
+
+
+.u-chevron-bottom {
+	position: relative;
+	clip-path: polygon(0% 0%, 100% 0%, 100% calc(100% - 2rem), calc(50% + 2rem) calc(100% - 2rem), 50% 100%, calc(50% - 2rem) calc(100% - 2rem), 0 calc(100% - 2rem));
+	margin-bottom: -2rem;
+	padding-bottom: 6rem;
+    @include break-point(md) {
+        padding-bottom: 8rem;
+    }
+    @include break-point(lg) {
+        padding-bottom: 10rem;
+	}
+	@for $i from 1 through 10 {
+		&:nth-child(#{$i}) {
+			z-index: 10 - $i ;
+		}
+	}
+}

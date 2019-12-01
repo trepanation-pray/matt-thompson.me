@@ -1,0 +1,136 @@
+/* =======================================================
+    Buttons
+
+    example:
+
+    <a href="#" class="button button-style--classic button-color--primary">Link</a>
+======================================================= */
+
+$btn-colors: $theme-colors;
+
+.c-btn {
+	cursor: pointer;
+	border-radius: 5px;
+	position: relative;
+	display: inline-block;
+	transition: 0.2s;
+	padding: 0.6em 1.6em;
+	text-transform: uppercase;
+	letter-spacing: .25rem;
+	font: {
+		family: "Lato",sans-serif;
+		weight: 700;
+	}
+	&:hover,
+	&:focus {
+		text-decoration: none;
+	}
+
+	&-style {
+		&--classic {
+			display: inline-block;
+			transition: 0.2s;
+			border: {
+				style: solid;
+				width: 3px;
+			}
+
+			&:hover {
+				text-decoration: none;
+				transform: translatey(-0.1em);
+				box-shadow: 0 0.1em 0.1em rgba($color-dark, 0.25),
+					0 0.2em 0.5em rgba($color-dark, 0.2);
+				outline: none;
+			}
+		}
+		&--outline {
+			background: none;
+			border: {
+				style: solid;
+				width: 3px;
+			}
+			&:hover {
+				text-decoration: none;
+				transform: translatey(-0.1em);
+				box-shadow: 0 0.1em 0.1em rgba($color-dark, 0.25),
+					0 0.2em 0.5em rgba($color-dark, 0.2);
+				outline: none;
+			}
+		}
+	}
+
+	@each $btn-color-name, $btn-color in $theme-colors {
+		&-color--#{$btn-color-name} {
+			&.c-btn {
+				&-style {
+					&--outline {
+						color: $btn-color;
+						border: {
+							color: $btn-color;
+						}
+
+						&:hover {
+							background: {
+								color: $btn-color;
+							}
+							@if (lightness($btn-color) > 65) {
+								color: darken($btn-color, 40%);
+							} @else {
+								color: white;
+							}
+						}
+					}
+
+					&--classic {
+						@if (lightness($btn-color) > 65) {
+							color: $color-dark;
+						} @else {
+							color: rgba(white, 0.85);
+						}
+
+						border: {
+							color: $btn-color;
+						}
+
+						background: {
+							color: $btn-color;
+						}
+
+						&:hover {
+							color: white;
+							@if $btn-color == $color-dark {
+								border: {
+									color: lighten($btn-color, 20%);
+								}
+								background: {
+									color: lighten($btn-color, 20%);
+								}
+							} @else if $btn-color == white {
+								color: white;
+								border: {
+									color: darken($btn-color, 50%);
+								}
+								background: {
+									color: darken($btn-color, 50%);
+								}
+							} @else {
+								border: {
+									color: darken($btn-color, 10%);
+								}
+								background: {
+									color: darken($btn-color, 10%);
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	&:focus {
+		border-color: $color-accessibilityBackground;
+		background-color: $color-accessibilityBackground;
+		color: $color-accessibilityForeground;
+		outline: none;
+	}
+}

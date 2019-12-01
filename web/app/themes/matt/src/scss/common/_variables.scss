@@ -1,0 +1,32 @@
+/* =======================================================
+	Variables
+======================================================= */
+
+$color-primary: #d99622;
+$color-secondary: #001a4b;
+$color-dark: #1e1e1e;
+$color-mid: #6a6a6a;
+$color-light: #e5e8ed;
+
+$color-success: green;
+$color-warning: orange;
+$color-error: red;
+
+$color-accessibilityBackground: #ffc107;
+$color-accessibilityForeground: $color-secondary;
+
+$theme-colors: (
+	default: white,
+	primary: $color-primary,
+	secondary: $color-secondary,
+	dark: $color-dark,
+	mid: $color-mid,
+	light: $color-light,
+	success: $color-success,
+	warning: $color-warning,
+	error: $color-error,
+	white: white
+);
+
+
+$fa-font-path: "../fonts" !default;
