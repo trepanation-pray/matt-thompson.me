@@ -1,0 +1,77 @@
+.o-contact {
+    text-align: center;
+    &__form { 
+        max-width: 400px;
+        margin: 0 auto;
+        @include break-point(md) {
+            margin: 0 0 0 auto;
+        }
+        .c-btn {
+            width: 100%;
+        }
+    }
+    &__details {
+      
+    }
+    &__title {
+        font-size: 2rem;
+        @include break-point(lg) {
+            font-size: 3rem;
+        }
+        margin-bottom: 4rem;
+    }
+    &__phone {
+        font-size: 1.5rem;
+        @include break-point(lg) {
+            font-size: 2rem;
+        }
+    }
+    &__email {
+        font-size: 1.5rem;
+        @include break-point(lg) {
+            font-size: 2rem;
+        }
+    }
+}
+
+.c-social-media {
+    padding: 0;
+    &__item {
+        margin: 2rem 1rem 1rem 0;
+        display: inline-block;
+        @include break-point(md) {
+            display: flex;
+            align-items: center;
+            list-style: none;
+        }
+    }
+    &__link {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 3.5rem;
+        width: 3.5rem;
+        border-radius: 50%;
+        background: white;
+        font-size: 1.75rem;
+  
+        line-height: 1;
+        color: $color-secondary;
+        transition: .3s;
+        border: 2px solid white;
+        &:hover {
+        background: $color-secondary;
+        color: white;
+           
+        }
+    }
+    &__label {
+        display: none;
+        @include break-point(md) {
+            display: block;
+            margin-left: 1rem;
+            font-size: 1.5rem;
+        }
+    }
+        
+}

@@ -1,0 +1,27 @@
+/* =======================================================
+    Fonts
+    
+    This is where you place any additional CSS for fonts you need.
+    If you're using Google Fonts try using the following link:
+    https://google-webfonts-helper.herokuapp.com/fonts/
+======================================================= */
+
+
+/* lato-300 - latin */
+@font-face {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 300;
+    src: local('Lato Light'), local('Lato-Light'),
+         url('../fonts/lato-300.woff2') format('woff2'), 
+         url('../fonts/lato-300.woff') format('woff');
+  }
+  /* lato-700 - latin */
+  @font-face {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 700;
+    src: local('Lato Bold'), local('Lato-Bold'),
+         url('../fonts/lato-700.woff2') format('woff2'),
+         url('../fonts/lato-700.woff') format('woff');
+  }

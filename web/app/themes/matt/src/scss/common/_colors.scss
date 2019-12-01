@@ -1,0 +1,20 @@
+/* =======================================================
+    Colours
+======================================================= */
+
+//Color help classes using $theme-colors
+
+@each $color-name, $color in $theme-colors {
+	.u-color--#{$color-name} {
+		color: $color;
+		path & {
+			fill: $color;
+		}
+	}
+	.u-bg--#{$color-name} {
+		background-color: $color;
+	}
+	.u-border-color--#{$color-name} {
+		border-color: $color;
+	}
+}

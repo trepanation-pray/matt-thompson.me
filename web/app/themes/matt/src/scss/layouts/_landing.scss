@@ -1,0 +1,20 @@
+/* =======================================================
+	Landing
+======================================================= */
+
+.o-landing-intro {
+
+    &__image {
+        display: block;
+        width: 100%;
+        max-width: 300px;
+        margin: auto;
+        height: auto;
+        border-radius: 50%;
+    }
+    .u-row {
+        align-items: center;
+        justify-content: center;
+
+    }
+}
