@@ -29,7 +29,7 @@
 		"gulp-sourcemaps": "^2.6.5",
 		"gulp-uglify-es": "^1.0.4",
 		"instafeed.js": "^1.4.1",
-		"jquery": "^3.4.1",
+		"jquery": "^3.5.0",
 		"jquery.easing": "^1.4.1",
 		"normalize.css": "^7.0.0",
 		"owl.carousel": "^2.2.0",
